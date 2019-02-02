@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://bootswatch.com/4/united/bootstrap.min.css" >
+
+    <title>User</title>
+</head>
+<body>
+
+<div class="container">
+    <form action="/user/get" method="get"></form>
+    <form action="/user/post" method="get"></form>
+    {% if session_errors %}
+    <div class="alert alert-danger">{{session_errors}}</div>
+    {% endif %}
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+<style>
+
+    .jumbotron{
+        width: 80%;
+        background-color:#ffcc00;
+        margin: 0 auto;
+    }
+    .container{
+        width:100%;
+        background-color:#feb600 ;
+        max-width:100% !important;
+    }
+    .card{
+        margin: auto;
+    }
+    .card-header{
+        max-width:100%;
+        margin: auto;
+    }
+</style>
