@@ -13,7 +13,7 @@ use Framework\Model;
 
 class Log extends Model
 {
-    protected $table = "log";
+    protected $user = "user";
 
     public function addLog(string $text)
     {

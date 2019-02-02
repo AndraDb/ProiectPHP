@@ -1,0 +1,19 @@
+.card-container
+{   
+    box-shadow: 0 4px 8px 0 RED;
+    transition: 0.8s;
+    padding: 5px 20px;
+    border-radius: 10px;
+    text-align: center;
+    position:absolute;
+    margin-top:45%;
+    margin-left:50%;
+    width:80%;
+    background-image: none;
+    
+}
+#boxy
+{
+    border-radius: 5px;
+    border-color:red;
+}

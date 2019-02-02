@@ -40,16 +40,16 @@ class AccountController extends BaseController
     {
         $username =  $_POST["username"];
         $password = $_POST["password"];
-        $firstname = $_POST["firstname"];
-        $lastname = $_POST["lastname"];
-        $phone = $_POST["phone"];
+        $firstname = $_POST["FirstName"];
+        $lastname = $_POST["LastName"];
+        $phone = $_POST["Phone"];
         $email = $_POST["email"];
         $_SESSION["Errors"] = "";
 
         if ($this->isValidFormData($firstname, $lastname, $email, $password) && !$this->isEmailTaken($email)) {
             $userModel = new User();
             $userModel->register($username, $password, $firstname, $lastname, $phone, $email);
-            $_SESSION["email"] = $email;
+            $_SESSION["email"] = $username;
             $_SESSION["Errors"] = false;
             header("Location: /restaurants");
 
@@ -66,11 +66,11 @@ class AccountController extends BaseController
     }
 
     //logica
-    private function isEmailTaken(string $email): bool
+    private function isEmailTaken(string $username): bool
     {
         $user = new User();
 
-        if ($user->emailExists($email) == false) {
+        if ($user->emailExists($username) == false) {
 
             return false;
         }
