@@ -18,11 +18,13 @@ class AccountController extends BaseController
 
         $email = $_POST["email"];
         $pass = $_POST["password"];
-        //$type=$_POST["tip"];
+        //$types=$_POST["tip"];
+        
         $userModel = new User();
         $result = $userModel->checkUser($email, $pass);
+      //  $type=$userModel->checkType($types);
         
-       
+      
             if ($result) {
             $_SESSION["Errors"] = false;
             $_SESSION["email"] = $result->email;
@@ -36,7 +38,8 @@ class AccountController extends BaseController
             header("Location: /login");
             //echo("vai steaua ta");
                 }
-            
+           
+           
         
     
 }

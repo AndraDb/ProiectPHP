@@ -12,27 +12,54 @@
 
 <body>
 
-    <header id="contact">
-        <ul id="hlist">
-            <div class="row">
-                <div class="col">
-            <li id="list">
-                <button class="btn btn-danger">Add</button>
-
-            </li>
-        </div>
-        <div class="col-sm-2 text-center">
-            <li id="hlist" style="float:left">
-                <button class="btn btn-danger">Logout</button>
-
-            </li>
-        </div>
-        </ul>
-        </div>
-    </header>
+        <header id="contact">
+                <ul id="hlist">
+                        <div class="row">
+                                <div class="col">
+                                    <li id="list">
+                                        <p id="title3">Hi admin!</p>
+                                    </li>
+                                </div>
+                                <div class="col">
+                
+                                </div>
+                                <div class="col">
+                                    <li id="list">
+                                      
+                                     
+                                    </li>
+                                </div>
+                            </form>
+                                <div class="col">
+                                    <li id="list">
+                                            <form  action="/edit" method="post" class="boxy">
+                                                <li id="hlist" style="float:left">
+                                                    <input type="image" src="https://cdn3.iconfinder.com/data/icons/random-icon-set/512/user-512.png" id="pizzaimg"/>
+                                                    <p id="title3">PROFILE</p>
+                                                </li>
+                                            </form>
+                                    </li>
+                                </div>
+                                <div class="col">
+                
+                                </div>
+                    
+                                <div class="col">
+                                <form  action="/login" method="post" class="form-inline my-2 my-lg-0">
+                                    <li id="hlist" style="float:left">
+                                        <input type="image" src="https://image.flaticon.com/icons/png/512/25/25376.png" id="pizzaimg"/>
+                                        <p id="title3">LOG OUT</p>
+                                    </li>
+                                </form>
+                                </div>
+                                </div>
+                                </ul>
+                                
+                </div>
+            </header>
     <div class="container">
 
-            <form action="/register/post" method="post">
+            <form action="/AddMenu/post" method="post">
     
                 <div class="card-container" id="boxy">
                     <div class="row form-group">
@@ -87,49 +114,60 @@
 
 </html>
 <style>
+     body
+{
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    background-image:url("https://d2gk7xgygi98cy.cloudfront.net/20-4-facebook.jpg"); 
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    color:white;
+    
+}
+#cartimg{
+    padding: 1%;
+    width: 50px;
+    height: 55px;
+}
+#pizzaimg{
+    padding: 1%;
+    width: 60px;
+    height: 60px;
+}
+#title1{
+    font-size: 500%;
+}
+#title3{
+    font-size: 110%;
+    padding-left: 40px;
+    color: white;
+}
+#text1{
+    font-size: 70%;
+}
+#nume1{
+    font-size:130%;
+}
+#title2{
+    font-size: 300%;
+}
      .container
     {   
-        box-shadow: none;
+        box-shadow:none;
         transition: 0.8s;
-        padding: none;
-        border-radius: none;
-        text-align: justify;
+        
         position:absolute;
-        margin-top:10%;
-        margin-left:30%;
-        width:65%;
+        margin-top:5%;
+        margin-left:5%;
+        width:70%;
         
         
     }
     #boxy
     {
         border-radius: 5px;
-        
-    }
-    a
-    {
-        text-decoration: none;
-        color:white;
-      
 
-    }
-    body {
-        font-family: "Trebuchet MS", Helvetica, sans-serif;
-        /*background-image:url("https://cdn131.picsart.com/271624921025211.png?r1024x1024"); 
-        background-size:auto;
-        background-repeat: repeat;
-        */
-        background-color: rgb(235, 157, 157);
-         color:white;
-        margin: 0;
-       
-
-    }
-
-    h1 {
-        text-align: left;
-        text-decoration-color: #424242;
-        font-family: "Trebuchet MS", Helvetica, sans-serif;
     }
 
     #hlist {
@@ -159,4 +197,23 @@
         padding: -2px 3px;
         text-decoration: none;
     }
+td, th {
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+th, td {
+    padding: 10px;
+    padding-right: 100px;
+    text-align: left;
+}
+#t1 {
+  width: 100%;    
+  background-color:coral;
+  height: 100%;
+}
+#t {
+  width: 100%;    
+  background-color:coral;
+  height: 100%;
+}
 </style>

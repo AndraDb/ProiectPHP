@@ -17,6 +17,13 @@ class User extends Model
             return $result;
 
     }
+   /* public function checkType(string $type)
+    {
+        $result =$this->getByParams(["tip"=>$type]);
+        
+        return $result;
+    }
+*/
 
     public function updateUser($username, $firstname, $lastname,  $phone){
         $db = $this->newDbCon();

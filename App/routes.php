@@ -17,6 +17,10 @@ $routes = [
     '/logout/' => ['controller' => 'AccountController', 'action' => 'logout'],
     
 
+    '/AddMenu' => ['controller' => 'AddMenuController','action' => 'AddMenuGET','guard' => "Authenticated"],
+    '/AddMenu/' => ['controller' => 'AddMenuController','action' => 'AddMenuGET','guard' => "Authenticated"],
+    '/AddMenu/post' => ['controller' => 'AddMenuController', 'action' => 'AddMenuPOST','guard' => "Authenticated"],
+
     'order'=>['controller'=>'orders','action'=>'order'],
     '/order/'=>['controller'=>'orders','action'=>'order'],
     '/order/post' => ['controller' => 'orders', 'action' => 'orderPOST'],
