@@ -1,93 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://bootswatch.com/4/united/bootstrap.min.css" >
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <title>Welcome</title>
 </head>
+
 <body>
 
-<div class="container">
+    <div class="container">
 
-<form action="/register/post" method="post">
+        <form action="/register/post" method="post">
+
+            <div class="card-container" id="boxy">
+                <div class="row form-group">
+                    <div class="col">
+                        <label for="username">Username</label>
+                    </div>
+                    <div class="col">
+                        <input class="form-control" type="text" name="username" required placeholder="username" />
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <div class="col">
+                        <label for="password"> Password</label>
+                    </div>
+                    <div class="col">
+                        <input class="form-control" type="password" name="password" required minlength=6 />
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <div class="col">
+                        <label for="password"> Repeat Password</label>
+                    </div>
+                    <div class="col">
+                        <input class="form-control" type="password" name="repeatpassword" required minlength=6 />
+                    </div>
+                </div>
 
 
-    <div class="row form-group">
-        <div class="col">
-            <label for="username">Username</label>
-        </div>
-        <div class="col">
-            <input class="form-control" type="text" name="username" required placeholder="username"/>
-        </div>
+                <div class="row form-group">
+                    <div class="col">
+                        <label for="firstname">First Name</label>
+                    </div>
+                    <div class="col">
+                        <input class="form-control" type="text" name="firstname" />
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <div class="col">
+                        <label for="lastname">Last Name</label>
+                    </div>
+                    <div class="col">
+                        <input class="form-control" type="text" name="lastname" />
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <div class="col">
+                        <label for="phone">Phone</label>
+                    </div>
+                    <div class="col">
+                        <input class="form-control" type="text" name="phone" />
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <div class="col">
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="col">
+                        <input class="form-control" type="email" name="email" required placeholder="email" />
+                    </div>
+                </div>
+            </form>
+            <form action="/login" method="post">
+                <button class="btn btn-primary" type="submit"> Sign in </button>
+            </form>
+       
+    </div>
+        {% if session_errors %}
+        <div class="alert alert-danger">{{session_errors}}</div>
+        {% endif %}
+
+        </br>
+        <div> If you are already have an account  click  <a href="login"> here </a> </div>
     </div>
 
-    <div class="row form-group">
-        <div class="col">
-            <label for="password"> Password</label>
-        </div>
-        <div class="col">
-            <input class="form-control" type="password" name="password" required minlength=6 />
-        </div>
     </div>
+    <style>
 
-    <div class="row form-group">
-        <div class="col">
-            <label for="password"> RepeatPassword</label>
-        </div>
-        <div class="col">
-            <input class="form-control" type="password" name="repeatpassword" required minlength=6 />
-        </div>
-    </div>
+body
+    {
+        background-image:url("https://data.whicdn.com/images/310711793/large.jpg"); 
+        background-size:cover;
+        
+         color:white;
+    
+    }
+     .container
+    {   
+        box-shadow: none;
+        transition: 0.8s;
+        padding: none;
+        border-radius: none;
+        text-align: justify;
+        position:absolute;
+        margin-top:10%;
+        margin-left:30%;
+        width:65%;
+        
+        
+    }
+    #boxy
+    {
+        border-radius: 5px;
+        
+    }
+    a
+    {
+        text-decoration: none;
+        color:white;
+      
+
+    }
 
 
-    <div class="row form-group">
-        <div class="col">
-            <label for="firstname">First Name</label>
-        </div>
-        <div class="col">
-            <input class="form-control" type="text" name="firstname"/>
-        </div>
-    </div>
-
-    <div class="row form-group">
-        <div class="col">
-            <label for="lastname">Last Name</label>
-        </div>
-        <div class="col">
-            <input class="form-control" type="text" name="lastname"/>
-        </div>
-    </div>
-
-    <div class="row form-group">
-        <div class="col">
-            <label for="phone">Phone</label>
-        </div>
-        <div class="col">
-            <input class="form-control" type="text" name="phone"/>
-        </div>
-    </div>
-
-    <div class="row form-group">
-        <div class="col">
-            <label for="email">Email</label>
-        </div>
-        <div class="col">
-            <input class="form-control" type="email" name="email" required placeholder="email"/>
-        </div>
-    </div>
-
-    <button class="btn btn-primary" type="submit"> Sign in </button>
-</form>
-    {% if session_errors %}
-    <div class="alert alert-danger">{{session_errors}}</div>
-    {% endif %}
-
-</br>
-<div > If you are allready reagistered please login <a href="login"> aici </a> </div>
-</div>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </style>
 </body>
+
 </html>

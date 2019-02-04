@@ -6,10 +6,11 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
    
 </head>
 <body>
-
+   
 <div class="container " >
     <h1> Login </h1>
     <br>
@@ -33,9 +34,7 @@
             </div>
         </div>
 
-        {% if session_errors %}
-        <div class="alert alert-danger">{{session_errors}}</div>
-         {% endif %}
+       
             <br>
 
 
@@ -44,14 +43,13 @@
             <div class="col-2 ">
                 <button class="btn btn-primary" type="submit"> Login </button>
             </div>
-            <div class="col-2 ">
-                <button class="btn btn-info" type="submit">Register</button>
+          
+       
 
-             </div>
+             </form>
+    
+             <button class="btn btn-info" id="button"><a href="register" >Register</a></button>
         </div>
-
-    </form>
-
 </div>
 
 
@@ -60,25 +58,26 @@
 </body>
 </html>
 <style>
+
     body
-{
-    background-image:url("https://d2gk7xgygi98cy.cloudfront.net/20-4-facebook.jpg"); 
-    background-size:cover;
-    background-repeat: no-repeat;
-    color:white;
+    {
+        background-image:url("https://d2gk7xgygi98cy.cloudfront.net/20-4-facebook.jpg"); 
+        background-size:cover;
+        
+         color:white;
     
-}
+    }
      .container
     {   
-        box-shadow: 0 4px 8px 0 white;
+        box-shadow: none;
         transition: 0.8s;
-        padding: 5px 20px;
-        border-radius: 10px;
+        padding: none;
+        border-radius: none;
         text-align: justify;
         position:absolute;
         margin-top:10%;
         margin-left:30%;
-        width:80%;
+        width:65%;
         
         
     }
@@ -86,5 +85,12 @@
     {
         border-radius: 5px;
         
+    }
+    a
+    {
+        text-decoration: none;
+        color:white;
+      
+
     }
     </style>

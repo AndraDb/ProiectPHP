@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Add menu options</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+    <header id="contact">
+        <ul id="hlist">
+            <div class="row">
+                <div class="col">
+            <li id="list">
+                <button class="btn btn-danger">Add</button>
+
+            </li>
+        </div>
+        <div class="col-sm-2 text-center">
+            <li id="hlist" style="float:left">
+                <button class="btn btn-danger">Logout</button>
+
+            </li>
+        </div>
+        </ul>
+        </div>
+    </header>
+    <div class="container">
+
+            <form action="/register/post" method="post">
+    
+                <div class="card-container" id="boxy">
+                    <div class="row form-group">
+                        <div class="col">
+                            <label for="type">Type of pizza</label>
+                        </div>
+                        <div class="col">
+                            <input class="form-control" type="text" name="type"  />
+                        </div>
+                    </div>
+    
+                    <div class="row form-group">
+                        <div class="col">
+                            <label for="password"> Price</label>
+                        </div>
+                        <div class="col">
+                            <input class="form-control" type="text" name="price"  />
+                        </div>
+                    </div>
+    
+                    <div class="row form-group">
+                        <div class="col">
+                            <label for="weight"> Weight(g)</label>
+                        </div>
+                        <div class="col">
+                            <input class="form-control" type="text" name="weight" />
+                        </div>
+                    </div>
+    
+    
+                    <div class="row form-group">
+                        <div class="col">
+                            <label for="ingredients">Ingredients</label>
+                        </div>
+                        <div class="col">
+                            <input class="form-control" type="text" name="ingredients" />
+                        </div>
+                    </div>
+    
+                   
+    
+                    <button class="btn btn-danger" type="submit"> Update  </button>
+            </form>
+        </div>
+           
+    
+            </br>
+
+
+
+</body>
+
+</html>
+<style>
+     .container
+    {   
+        box-shadow: none;
+        transition: 0.8s;
+        padding: none;
+        border-radius: none;
+        text-align: justify;
+        position:absolute;
+        margin-top:10%;
+        margin-left:30%;
+        width:65%;
+        
+        
+    }
+    #boxy
+    {
+        border-radius: 5px;
+        
+    }
+    a
+    {
+        text-decoration: none;
+        color:white;
+      
+
+    }
+    body {
+        font-family: "Trebuchet MS", Helvetica, sans-serif;
+        /*background-image:url("https://cdn131.picsart.com/271624921025211.png?r1024x1024"); 
+        background-size:auto;
+        background-repeat: repeat;
+        */
+        background-color: rgb(235, 157, 157);
+         color:white;
+        margin: 0;
+       
+
+    }
+
+    h1 {
+        text-align: left;
+        text-decoration-color: #424242;
+        font-family: "Trebuchet MS", Helvetica, sans-serif;
+    }
+
+    #hlist {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #ED5858;
+    }
+
+    #hlist input[type=text] {
+        float: right;
+        padding: 6px;
+        border: none;
+        margin-top: 8px;
+        margin-right: 16px;
+        font-size: 15px;
+        background-color: #ED5858
+    }
+
+    #list {
+        float: left;
+        display: block;
+        color: #424242;
+        text-align: center;
+        font-family: "Trebuchet MS", Helvetica, sans-serif;
+        padding: -2px 3px;
+        text-decoration: none;
+    }
+</style>

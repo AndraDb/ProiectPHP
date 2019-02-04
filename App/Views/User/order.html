@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Order</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+    <header id="contact">
+        <ul id="hlist">
+                <div class="row">
+                        <div class="col">
+                            <li id="list">
+                                <p id="title3">Welcome to your cart , dear customer!</p>
+                            </li>
+                        </div>
+                        <div class="col">
+        
+                        </div>
+                        <div class="col">
+                            <li id="list">
+                              
+                                <input type="image" src="https://pixy.org/src/441/4415309.png" id="pizzaimg"/>
+                                    <p id="title3">CART</p>
+                            </li>
+                        </div>
+                    </form>
+                        <div class="col">
+                            <li id="list">
+                                    <form  action="/edit" method="post" class="boxy">
+                                        <li id="hlist" style="float:left">
+                                            <input type="image" src="https://cdn3.iconfinder.com/data/icons/random-icon-set/512/user-512.png" id="pizzaimg"/>
+                                            <p id="title3">PROFILE</p>
+                                        </li>
+                                    </form>
+                            </li>
+                        </div>
+                        <div class="col">
+        
+                        </div>
+            
+                        <div class="col">
+                        <form  action="/login" method="post" class="form-inline my-2 my-lg-0">
+                            <li id="hlist" style="float:left">
+                                <input type="image" src="https://image.flaticon.com/icons/png/512/25/25376.png" id="pizzaimg"/>
+                                <p id="title3">LOG OUT</p>
+                            </li>
+                        </form>
+                        </div>
+                        </div>
+                        </ul>
+                        
+        </div>
+    </header>
+    <div class="container">
+        <div class="card-container ">
+            <form action="/orders" method="post">
+                <table class="table table-hover table-dark">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Order</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Price</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td colspan="2">Larry the Bird</td>
+                            <td>@twitter</td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+        </div>
+    </div>
+
+</form>
+    </div>
+    </div>
+
+
+
+</body>
+
+</html>
+<style>
+   body
+{
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    background-image:url("https://d2gk7xgygi98cy.cloudfront.net/20-4-facebook.jpg"); 
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    color:white;
+    
+}
+#cartimg{
+    padding: 1%;
+    width: 50px;
+    height: 55px;
+}
+#pizzaimg{
+    padding: 1%;
+    width: 60px;
+    height: 60px;
+}
+#title1{
+    font-size: 500%;
+}
+#title3{
+    font-size: 110%;
+    padding-left: 40px;
+    color: white;
+}
+#text1{
+    font-size: 70%;
+}
+#nume1{
+    font-size:130%;
+}
+#title2{
+    font-size: 300%;
+}
+     .container
+    {   
+        box-shadow:none;
+        transition: 0.8s;
+        
+        position:absolute;
+        margin-top:5%;
+        margin-left:5%;
+        width:70%;
+        
+        
+    }
+    #boxy
+    {
+        border-radius: 5px;
+
+    }
+
+    #hlist {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #ED5858;
+    }
+
+    #hlist input[type=text] {
+        float: right;
+        padding: 6px;
+        border: none;
+        margin-top: 8px;
+        margin-right: 16px;
+        font-size: 15px;
+        background-color: #ED5858
+    }
+
+    #list {
+        float: left;
+        display: block;
+        color: #424242;
+        text-align: center;
+        font-family: "Trebuchet MS", Helvetica, sans-serif;
+        padding: -2px 3px;
+        text-decoration: none;
+    }
+td, th {
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+th, td {
+    padding: 10px;
+    padding-right: 100px;
+    text-align: left;
+}
+#t1 {
+  width: 100%;    
+  background-color:coral;
+  height: 100%;
+}
+#t {
+  width: 100%;    
+  background-color:coral;
+  height: 100%;
+}
+
+
+
+
+
+
+  
+</style>

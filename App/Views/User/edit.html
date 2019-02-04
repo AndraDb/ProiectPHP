@@ -8,34 +8,26 @@
     <title>Update Profile</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Food ordering</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
+<nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="/edit">Profile</a>
     <div class="collapse navbar-collapse" id="navbarColor02">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="/restaurants">Restaurants <span class="sr-only">(current)</span></a>
-            </li>
             <li class="nav-item">
-                <a class="nav-link" href="/edit">Edit user</a>
+                <a class="nav-link" href="/MeniuClient">Back to menu</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/show">Show user</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/cart">Cart</a>
-            </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <li class="nav-item">
-                <a class="btn btn-danger" href="/logout">Logout</a>
+        <form  action="/login" method="post" class="form-inline my-2 my-lg-0">
+            <li id="hlist" style="float:left">
+                <input type="image" src="https://image.flaticon.com/icons/png/512/25/25376.png" id="pizzaimg"/>
+                <p id="title3">LOG OUT</p>
             </li>
         </form>
     </div>
 </nav>
+<br><br><br><br>
 <div class="container">
     <form action="/edit/post" method="post">
 
@@ -88,3 +80,31 @@
 
 </body>
 </html>
+
+<style>
+
+    #pizzaimg{
+    padding: 1%;
+    width: 60px;
+    height: 60px;
+}
+
+body{
+    background-image:url("https://d2gk7xgygi98cy.cloudfront.net/20-4-facebook.jpg"); 
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    color:white;
+    
+}
+.navbar-brand{
+    color:white;
+}
+.nav-link{
+    color: white;
+}
+.navbar{
+    background-color: #ED5858;
+}
+</style>

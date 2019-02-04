@@ -18,18 +18,28 @@ class AccountController extends BaseController
 
         $email = $_POST["email"];
         $pass = $_POST["password"];
+        //$type=$_POST["tip"];
         $userModel = new User();
         $result = $userModel->checkUser($email, $pass);
-        if ($result) {
+        
+       
+            if ($result) {
             $_SESSION["Errors"] = false;
             $_SESSION["email"] = $result->email;
-            header("Location: /restaurants");
 
-        } else {
+            header("/login/post");
+            header("Location: /MeniuClient");
+           //echo("adadadadad0");
+
+                } else {
             $_SESSION["Errors"] = "invalid credentials";
             header("Location: /login");
-        }
-    }
+            //echo("vai steaua ta");
+                }
+            
+        
+    
+}
 
     public function registerGET()
     {
@@ -40,18 +50,20 @@ class AccountController extends BaseController
     {
         $username =  $_POST["username"];
         $password = $_POST["password"];
-        $firstname = $_POST["FirstName"];
-        $lastname = $_POST["LastName"];
-        $phone = $_POST["Phone"];
+        $firstname = $_POST["firstname"];
+        $lastname = $_POST["lastname"];
+        //$tip=$_POST["tip"];
+        $phone = $_POST["phone"];
         $email = $_POST["email"];
         $_SESSION["Errors"] = "";
 
         if ($this->isValidFormData($firstname, $lastname, $email, $password) && !$this->isEmailTaken($email)) {
             $userModel = new User();
             $userModel->register($username, $password, $firstname, $lastname, $phone, $email);
-            $_SESSION["email"] = $username;
+            $_SESSION["email"] = $email;
             $_SESSION["Errors"] = false;
-            header("Location: /restaurants");
+         
+          header("/login");
 
         } else {
             header("Location: /register");
@@ -66,11 +78,11 @@ class AccountController extends BaseController
     }
 
     //logica
-    private function isEmailTaken(string $username): bool
+    private function isEmailTaken(string $email): bool
     {
         $user = new User();
 
-        if ($user->emailExists($username) == false) {
+        if ($user->emailExists($email == false)) {
 
             return false;
         }

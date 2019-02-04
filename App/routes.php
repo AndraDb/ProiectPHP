@@ -15,7 +15,16 @@ $routes = [
 
     '/logout' => ['controller' => 'AccountController', 'action' => 'logout'],
     '/logout/' => ['controller' => 'AccountController', 'action' => 'logout'],
+    
 
+    'order'=>['controller'=>'orders','action'=>'order'],
+    '/order/'=>['controller'=>'orders','action'=>'order'],
+    '/order/post' => ['controller' => 'orders', 'action' => 'orderPOST'],
+
+    '/MeniuClient' => ['controller' => 'MeniuClientController','action' => 'meniuClientGET','guard' => "Authenticated"],
+    '/MeniuClient/' => ['controller' => 'MeniuClientController','action' => 'meniuClientGET','guard' => "Authenticated"],
+    '/MeniuClient/post' => ['controller' => 'MeniuClientController', 'action' => 'meniuClientPOST','guard' => "Authenticated"],
+    
     '/user' => ['controller' => 'UserController','action' => 'userGET', 'guard' => "Authenticated"],
     '/user/' => ['controller' => 'UserController','action' => 'userGET', 'guard' => "Authenticated"],
     '/post' => ['controller' => 'UserController','action' => 'userPOST', 'guard' => "Authenticated"],
@@ -31,23 +40,4 @@ $routes = [
     '/user/{id}' => ['controller' => 'UserController','action' => 'showAction', 'guard' => "Authenticated"],
 
 
-    '/restaurants' => ['controller' => 'RestaurantController','action' => 'restaurantsGET','guard' => "Authenticated"],
-    '/restaurants/' => ['controller' => 'RestaurantController','action' => 'restaurantsGET','guard' => "Authenticated"],
-    '/restaurants/post' => ['controller' => 'RestaurantController', 'action' => 'restaurantsPOST','guard' => "Authenticated"],
-
-    '/menu?id={id}' => ['controller' => 'FoodController','action' => 'menuGET','guard' => "Authenticated"],
-    '/menu?id={id}/' => ['controller' => 'FoodController','action' => 'menuGET','guard' => "Authenticated"],
-    '/menu?id={id}/post' => ['controller' => 'FoodController', 'action' => 'menuPOST','guard' => "Authenticated"],
-
-    '/addfood' => ['controller' => 'FoodController','action' => 'addfoodGET','guard' => "Authenticated"],
-    '/addfood/' => ['controller' => 'FoodController','action' => 'addfoodGET','guard' => "Authenticated"],
-    '/addfood/post' => ['controller' => 'FoodController', 'action' => 'addfoodPOST','guard' => "Authenticated"],
-
-    '/addrestaurant' => ['controller' => 'RestaurantController','action' => 'addrestaurantGET','guard' => "Authenticated"],
-    '/addrestaurant/' => ['controller' => 'RestaurantController','action' => 'addrestaurantGET','guard' => "Authenticated"],
-    '/addrestaurant/post' => ['controller' => 'RestaurantController', 'action' => 'addrestaurantPOST','guard' => "Authenticated"],
-
-    '/cart' => ['controller' => 'FoodController','action' => 'cartGET','guard' => "Authenticated"],
-    '/cart/' => ['controller' => 'FoodController','action' => 'cartGET','guard' => "Authenticated"],
-    '/cart/post' => ['controller' => 'FoodController', 'action' => 'cartPOST','guard' => "Authenticated"],
     ];

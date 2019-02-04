@@ -9,7 +9,7 @@ class Config {
         "host" => "localhost",
         "port" => 3306,
         "driver" => "mysql",
-        "dbname" => "user",
+        "dbname" => "users",
         "charset" => "utf8mb4",
         "user" => "root",
         "pass" => "",

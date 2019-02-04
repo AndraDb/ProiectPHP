@@ -7,11 +7,7 @@ Use App\Config;
 
 abstract class Model
 {
-<<<<<<< HEAD
     protected $user;
-=======
-    protected $table;
->>>>>>> 1ba14be3b87a539441aa295da0d9ef4b09050c1c
 
     public Function newDbCon($resultAsArray = false)
     {
@@ -48,11 +44,7 @@ abstract class Model
     public Function getAll(): array
     {
         $db = $this->newDbCon();
-<<<<<<< HEAD
-        $stmt = $db->query("SELECT * from $this->user");
-=======
         $stmt = $db->query("SELECT * from $this->table");
->>>>>>> 1ba14be3b87a539441aa295da0d9ef4b09050c1c
 
         return $stmt->fetchAll();
     }
@@ -63,11 +55,7 @@ abstract class Model
     public function get($id)
     {
         $db = $this->newDbCon();
-<<<<<<< HEAD
-        $stmt = $db->prepare("SELECT * from $this->user where id=?");
-=======
         $stmt = $db->prepare("SELECT * from $this->table where id=?");
->>>>>>> 1ba14be3b87a539441aa295da0d9ef4b09050c1c
         $stmt->execute([$id]);
         $rez = $stmt->fetch();
         return $rez;
@@ -105,22 +93,14 @@ abstract class Model
     {
         list($columns, $values) = $this->prepareDataForStmt($data);
         $db = $this->newDbCon();
-<<<<<<< HEAD
-        $stmt = $db->prepare("SELECT * from $this->user where $columns");
-=======
         $stmt = $db->prepare("SELECT * from $this->table where $columns");
->>>>>>> 1ba14be3b87a539441aa295da0d9ef4b09050c1c
         return $stmt->execute([$values]);
     }
 
     public function getByParams(array $data){
         list($columns, $values) = $this->prepareDataForStmt($data);
         $db = $this->newDbCon();
-<<<<<<< HEAD
-        $stmt = $db->prepare("SELECT * from $this->user where $columns");
-=======
         $stmt = $db->prepare("SELECT * from $this->table where $columns");
->>>>>>> 1ba14be3b87a539441aa295da0d9ef4b09050c1c
         $stmt->execute($values);
         $rez = $stmt->fetch();
         return $rez;
@@ -138,11 +118,7 @@ abstract class Model
             $params.=",?";
         }
         $col = implode(",",array_keys($data));
-<<<<<<< HEAD
-        $stmt=$db->prepare("INSERT INTO $this->user($col) VALUES ($params)");
-=======
         $stmt=$db->prepare("INSERT INTO $this->table($col) VALUES ($params)");
->>>>>>> 1ba14be3b87a539441aa295da0d9ef4b09050c1c
         $stmt->execute($values);
         return $db->lastInsertId();
     }
@@ -158,11 +134,7 @@ abstract class Model
         $values[] = reset($where);
 
         $db = $this->newDbCon();
-<<<<<<< HEAD
-        $stmt = $db->prepare(`UPDATE`  . $this->user . ` SET ` . $columns . ` WHERE ` . key($where) . `?`);
-=======
         $stmt = $db->prepare('UPDATE ' . $this->table . ' SET ' . $columns . ' WHERE ' . key($where) . '=?');
->>>>>>> 1ba14be3b87a539441aa295da0d9ef4b09050c1c
 
         return $stmt->execute($values);
     }

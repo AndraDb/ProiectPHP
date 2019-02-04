@@ -9,58 +9,48 @@
     <title>Update Profile</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Food ordering</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarColor02">
+<nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="/edit">Profile</a>
+    <div class="collapse navbar-collapse">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="/restaurants">Restaurants <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/edit">Edit user</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/show">Show user</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/cart">Cart</a>
-            </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="/MeniuClient">Back to menu</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="/show">Show user</a>
+                </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <li class="nav-item">
-                <a class="btn btn-danger" href="/logout">Logout</a>
+        <form  action="/login" method="post" class="form-inline my-2 my-lg-0">
+            <li id="hlist" style="float:left">
+                <input type="image" src="https://image.flaticon.com/icons/png/512/25/25376.png" id="pizzaimg"/>
+                <p id="title3">LOG OUT</p>
             </li>
         </form>
     </div>
 </nav>
+<br><br><br><br>
 <div class="container">
-    <table class="table table-hover">
-        <tbody>
-        <tr class="table-info">
+    <table class="table table-hover" id="t1"> 
+        <tr class="table">
             <th scope="row">Username</th>
             <td>{{user.username}}</td>
         </tr>
-        <tr class="table-info">
+        <tr class="table">
             <th scope="row">Firstname</th>
             <td>{{user.firstname}}</td>
         </tr>
-        <tr class="table-info">
+        <tr class="table">
             <th scope="row">Lastname</th>
             <td>{{user.lastname}}</td>
         </tr>
-        <tr class="table-info">
+        <tr class="table">
             <th scope="row">Email</th>
             <td>{{user.email}}</td>
         </tr>
-        <tr class="table-info">
+        <tr class="table">
             <th scope="row">Phone</th>
             <td>{{user.phone}}</td>
         </tr>
-        </tbody>
     </table>
 </div>
 
@@ -74,16 +64,35 @@
 </html>
 
 <style>
+.container{
+    color: black;
+}
+#t1{
+    background-color: #ED5858;
+}
+#pizzaimg{
+    padding: 1%;
+    width: 60px;
+    height: 60px;
+}
 
-    .table{
-        width: 70%;
-        background-color:#ffcc00;
-        margin: auto auto;
-    }
-    .container{
-         width:100%;
-         background-color:#feb600 ;
-         max-width:100% !important;
-        margin: auto;
-     }
+body{
+    background-image:url("https://d2gk7xgygi98cy.cloudfront.net/20-4-facebook.jpg"); 
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    color:white;
+    
+}
+.navbar-brand{
+    color:white;
+}
+.nav-link{
+    color: white;
+}
+
+.navbar{
+    background-color: #ED5858;
+}
 </style>

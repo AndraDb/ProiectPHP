@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Dodo
- * Date: 1/30/2019
- * Time: 11:15 AM
- */
+
 
 namespace App\Models;
 
