@@ -26,12 +26,20 @@ class AccountController extends BaseController
         
       
             if ($result) {
-            $_SESSION["Errors"] = false;
-            $_SESSION["email"] = $result->email;
+                if($email=='andra.dobritoiu97@gmail.com')
+                {
+                    $_SESSION["Errors"] = false;
+                    $_SESSION["email"] = $result->email;
 
-            header("/login/post");
-            header("Location: /MeniuClient");
-           //echo("adadadadad0");
+                    header("/login/post");
+                    header("Location: /AddMenu");
+                }
+                    //echo("adadadadad0");
+           else
+           {
+               header("/login/post");
+               header("Location: /MeniuClient");
+           }
 
                 } else {
             $_SESSION["Errors"] = "invalid credentials";
