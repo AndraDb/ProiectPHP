@@ -31,17 +31,19 @@ class AccountController extends BaseController
                     $_SESSION["Errors"] = false;
                     $_SESSION["email"] = $result->email;
 
-                    header("/login/post");
+                   // header("/login/post");
                     header("Location: /AddMenu");
+                 // echo("VAIAIAIAIAI");
                 }
                     //echo("adadadadad0");
            else
            {
-               header("/login/post");
+               //header("/login/post");
                header("Location: /MeniuClient");
            }
 
-                } else {
+                } 
+                else {
             $_SESSION["Errors"] = "invalid credentials";
             header("Location: /login");
             //echo("vai steaua ta");
@@ -74,7 +76,8 @@ class AccountController extends BaseController
             $_SESSION["email"] = $email;
             $_SESSION["Errors"] = false;
          
-          header("/login");
+         header("Location: /login");
+         //echo("Succes");
 
         } else {
             header("Location: /register");
@@ -119,7 +122,7 @@ class AccountController extends BaseController
         return true;
     }
 
-    //aici trebuie si repeat password
+
     public function isPasswordValid($password): bool
     {
         if (!isset($password) || strlen($password) < 6) {
@@ -128,6 +131,15 @@ class AccountController extends BaseController
         }
         return true;
     }
+    public function isPasswordRepeatValid($passwordrepeat): bool
+    {
+        if (!isset($passwordrepeat) || strlen($passwordrepeat) < 6) {
+            $_SESSION["Errors"] = "invalid password";
+            return false;
+        }
+        return true;
+    }
+
 
     private function isValidFormData(string $firstname, $lastname, $email, $password): bool
     {

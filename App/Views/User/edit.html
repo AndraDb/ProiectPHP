@@ -13,7 +13,8 @@
     <div class="collapse navbar-collapse" id="navbarColor02">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="/MeniuClient">Back to menu</a>
+               <!-- <a class="nav-link" href="/MeniuClient">Back to menu</a>-->
+               <button class="btn btn-danger" onclick="Back()">Return</button>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/show">Show user</a>
@@ -79,6 +80,11 @@
 </div>
 
 </body>
+<script>
+        function Back() {
+      window.history.back();
+    }
+    </script>
 </html>
 
 <style>

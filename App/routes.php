@@ -21,9 +21,9 @@ $routes = [
     '/AddMenu/' => ['controller' => 'AddMenuController','action' => 'AddMenuGET','guard' => "Authenticated"],
     '/AddMenu/post' => ['controller' => 'AddMenuController', 'action' => 'AddMenuPOST','guard' => "Authenticated"],
 
-    'order'=>['controller'=>'orders','action'=>'order'],
-    '/order/'=>['controller'=>'orders','action'=>'order'],
-    '/order/post' => ['controller' => 'orders', 'action' => 'orderPOST'],
+    '/Order' => ['controller' => 'OrderController','action' => 'OrderGET','guard' => "Authenticated"],
+    '/Order/' => ['controller' => 'OrderController','action' => 'OrderGET','guard' => "Authenticated"],
+    '/Order/post' => ['controller' => 'OrderController', 'action' => 'OrderPOST','guard' => "Authenticated"],
 
     '/MeniuClient' => ['controller' => 'MeniuClientController','action' => 'meniuClientGET','guard' => "Authenticated"],
     '/MeniuClient/' => ['controller' => 'MeniuClientController','action' => 'meniuClientGET','guard' => "Authenticated"],
